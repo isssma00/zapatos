@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Linkeamos a los estilos de bootstrap4 y un fichero css propio -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/estilos.css">
+        <title>REGISTRO</title>
+    </head>
+    <!-- creamos una tarjeta cntrada con un fondo de imagen -->
+    <body class="row justify-content-center align-items-center estrellas">
+        <div class="card margenTarjeta formaFol" style="width: 20rem;">
+            <div class="card-header cabecera"> Registro</div>
+            <div class="card-body">  
+            <!-- Redireccionamos la informacion a OlvidaContrasena.php y le añadimos la funcion de validar boton que permite que si algun campo es incorrecto  no se envie -->
+                <form id="registro" name="OlvidaContrasena" action="./OlvidaContrasena.php" method="POST" class="needs-validation" novalidate onsubmit="return validarBoton();">
+                    <div class="form-row">
+                        <div class="col-md-12 form-group">
+                            <label>DNI:</label>
+                            <input id="DNI" required type="text" placeholder="12345678L" class="form-control" name="DNI" autofocus="autofocus">
+                            <span class="text-danger" id="errorDNI"><small>Error</small></span>
+                        </div> 
+                        <div class="col-md-12 form-group">
+                            <label>Nueva Contraseña:</label>
+                            <input id="password" type="password" placeholder ="Caracteres Alfanumericos y simbolos"class="form-control" name="password" autofocus="autofocus" required>
+                            <span class="text-danger" id="errorpassword"><small>Error</small></span>
+                        </div>
+                        <div class="col-md-12 form-group">
+                                <label>Repetir Contrasena:</label>
+                                <input id="password2" type="password" placeholder ="Repita su Contrasena"class="form-control" name="password" autofocus="autofocus" required>
+                                <span class="text-danger" id="errorpassword2"><small>La contraseña no coincide</small></span>
+                        </div>
+                    </div>
+                    <!-- Enlaces que te mandan a registrarte o Iniciar Sesion -->
+                    <p><small><a href="Login.html">Iniciar Sesion</a></small></p>
+			        <p><small><a href="Registro.html">Registrarse</a></small></p>
+                    <div class="form-group mb-10">
+                        <button class="btn btn-success" type="submit" name="submit">Enviar</button>
+                        <button class="btn btn-danger" type="reset" name="reset">Vaciar</button>
+                    </div>
+                    <span class="text-danger" id="errorFOL"><small>Hay errores en el formulario</small></span>
+                </form>
+            </div> <!-- div card Body-->
+        </div><!-- div car -->
+    <script src="../js/OlvidaContrasenajs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    </body>
+</html>

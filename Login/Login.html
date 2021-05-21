@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Linkeamos a los estilos de bootstrap4 y un fichero css propio -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/estilos.css">
+		<title>Ingresar</title>
+    </head>
+	<!-- creamos una tarjeta cntrada con un fondo de imagen -->
+    <body class="row justify-content-center align-items-center estrellas">
+		<div class="card margenTarjeta formaFol" style="width: 20rem;">
+	        <div class="card-header cabecera">Ingreso</div>
+		        <div class="card-body">  
+					<!-- Redireccionamos la informacion a Login.php y le añadimos la funcion de validar boton que permite que si algun campo es incorrecto  no se envie -->
+			        <form id="Login" name="Login" action="Login.php" method="POST" class="needs-validation" novalidate onsubmit="return validarBoton();">
+						<div class="form-group">
+							<div class="col-md-12">
+								<label>Usuario:</label>
+								<input id="usuario" required type="text" placeholder="Introduzca su usuario" class="form-control" name="usuario" autofocus="autofocus">
+								<span class="text-danger" id="errorusuario"><small>Error</small></span>
+							</div>
+						</div> 
+						<div class="form-group">
+							<div class="col-md-12">
+								<label>Contraseña:</label>
+								<input id="password" type="password" placeholder ="Caracteres Alfanumericos y simbolos"class="form-control" name="password" autofocus="autofocus" required>
+								<span class="text-danger" id="errorpassword"><small>Error</small></span>
+							</div>
+						</div>
+						<!-- Enlaces que te mandan a registrarte o recperar contraseña -->
+			            <p><small><a href="Registro.html">Nuevo usuario</a></small></p>
+			            <p><small><a href="OlvidaContrasena.html">¿Olvidó su contraseña?</a></small></p>
+
+						<div class="form-group">
+			                <button class="btn btn-success" type="submit" name="submit">Enviar</button>
+			                <button class="btn btn-danger" type="reset" name="reset">Vaciar</button>
+			            </div>
+			        	<span class="text-danger" id="errorFOL"><small>Hay errores en el formulario</small></span>
+			        </form>
+		        </div>
+	        </div>
+		</div>
+    </body>
+    <script src="../js/Loginjs.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</html>

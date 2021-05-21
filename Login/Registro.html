@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Linkeamos a los estilos de bootstrap4 y un fichero css propio -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/estilos.css">
+        <title>REGISTRO</title>
+    </head>
+    <!-- creamos una tarjeta cntrada con un fondo de imagen -->
+    <body class="row justify-content-center align-items-center estrellas">
+        <div class="card margenTarjeta formaFol" style="width: 50rem;">
+            <div class="card-header cabecera"> Registro</div>
+            <div class="card-body">  
+                <!-- Redireccionamos la informacion a Registro.php y le añadimos la funcion de validar boton que permite que si algun campo es incorrecto  no se envie -->
+                <form id="registro" name="Registro" action="Registro.php" method="POST" class="needs-validation container row" novalidate onsubmit="return validarBoton();">
+                    <div class="col-md-6 form-group">
+                            <label>Usuario:</label>
+                            <input id="usuario" required type="text" placeholder="Introduzca su usuario" class="form-control" name="usuario" autofocus="autofocus">
+                            <span class="text-danger" id="errorusuario"><small>Error</small></span>
+                    </div> 
+                    <div class="col-md-6 form-group">
+                            <label>Contrasena:</label>
+                            <input id="password" type="password" placeholder ="Caracteres Alfanumericos y simbolos"class="form-control" name="password" autofocus="autofocus" required>
+                            <span class="text-danger" id="errorpassword"><small>Error</small></span>
+                    </div>
+                    <div class="col-md-6 form-group">
+                            <label>Repetir Contrasena:</label>
+                            <input id="password2" type="password" placeholder ="Repita su Contrasena"class="form-control" name="password" autofocus="autofocus" required>
+                            <span class="text-danger" id="errorpassword2"><small>La contraseña no coincide</small></span>
+                    </div>
+                    <div class="col-md-6 form-group">
+                                <label>Nombre:</label>
+                                <input id="nombre" required type="text" placeholder="Introduzca su nombre" class="form-control" name="nombre" autofocus="autofocus">
+
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>Apellido1:</label>
+                                <input id="apellido1" required type="text" placeholder="Introduzca su apellido1" class="form-control" name="apellido1" autofocus="autofocus">
+
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>Apellido2:</label>
+                                <input id="apellido2" required type="text" placeholder="Introduzca su apellido2" class="form-control" name="apellido2" autofocus="autofocus">
+
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>Telefono:</label>
+                                <input id="telefono" required type="text" placeholder="+34xxxxxxxxx" class="form-control" name="telefono" autofocus="autofocus">
+                                <span class="text-danger" id="errortelefono"><small>Error</small></span>
+
+                    </div> 
+                    <div class="col-md-6 form-group">
+                            <label>Correo:</label>
+                            <input id="correo" required type="email" placeholder ="user@correo.ext" class="form-control" name="correo" autofocus="autofocus">
+                            <span class="text-danger" id="errorcorreo"><small>Error</small></span>
+                    </div> 
+                    <div class="col-md-6 form-group">
+                            <label>Dirección:</label>
+                            <input id="direccion" required type="text" class="form-control" name="direccion" autofocus="autofocus">
+                            <span class="text-danger" id="errordireccion"><small>Error</small></span>
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>CP:</label>
+                                <input id="CP" required type="number" placeholder="XXXXX" class="form-control" name="CP" autofocus="autofocus">
+                                <span class="text-danger" id="errorCP"><small>Error</small></span>
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>Provincia:</label>
+                                <input id="provincia" required type="text"readonly="readonly" class="form-control" name="provincia" autofocus="autofocus">
+                    </div> 
+                    <div class="col-md-6 form-group">
+                                <label>Comunidad Autonoma:</label>
+                                <input id="comunidad" required type="text"readonly="readonly" class="form-control" name="comunidad" autofocus="autofocus">
+                    </div> 
+                    <div class="col-md-12 form-group">
+                            <label>DNI:</label>
+                            <input id="DNI" required type="text" placeholder="12345678L" class="form-control" name="DNI" autofocus="autofocus">
+                            <span class="text-danger" id="errorDNI"><small>Error</small></span>
+                    </div> 
+                    <!-- Enlace que te redirecciona a Logearte -->
+                    <p><small><a href="Login.html">¿Ya tienes una cuenta?</a></small></p>
+                    <div class="col-md-12 form-group">
+                        <button id="boton" class="btn btn-success" type="submit" name="submit">Enviar</button>
+                        <button class="btn btn-danger" type="reset" name="reset">Limpiar</button>
+                    </div>
+                <span class="text-danger" id="errorFOL"><small>Hay errores en el formulario</small></span>
+                </form>
+            </div> <!-- div card Body-->
+        </div><!-- div car -->
+    <script src="../js/Registrojs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    </body>
+</html>
