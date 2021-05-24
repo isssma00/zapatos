@@ -130,11 +130,12 @@ if($zapatos === FALSE){
 
 </div><br><br><br>
 <div class="cardc" style="max-width: 100rem; width: auto; margin: auto auto">
-<div class="row alinearCentroV">
-<form id="Login" name="Login" action="Login.php" method="POST" class="needs-validation" novalidate onsubmit="return validarBoton();">
+<div class=" comment">
+<form id="sistema" name="sistema" action="nuevo_sistema.php" method="POST" class="needs-validation" novalidate>
+<input type="hidden" name="idZapato" value="<?php echo $idZapatos; ?>">
   <div class="form-group">
       <label>Comentario:</label>
-      <input id="usuario" required type="text" placeholder="Introduzca su usuario" class="form-control" name="usuario" autofocus="autofocus">
+      <input id="comentario" required type="text" placeholder="Introduzca su comentario" class="form-control" name="usuario" autofocus="autofocus">
   </div> 
   <div class="form-group">
       <label>Puntuacion:</label>
@@ -145,7 +146,27 @@ if($zapatos === FALSE){
     </div>
 </form>
 </div>
+</div><br><br><br>
+<?php foreach($sistema as $sis){ ?>
+  <?php foreach($usuario as $usu){ ?>
+  <?php
+  if(($sis->IdUsuario) == ($usu->idUsuario)){
+    if(($sis->IdZapato) == ($idZapatos)){
+    ?>
+<div class="cardc" style="max-width: 100rem; width: auto; margin: auto auto">
+<div class=" comment">
+  <div class="form-group col-xs-4">
+      <p><b>Usuario:</b> <?php echo $usu->Usuario  ?></p>
+  </div> 
+  <div class="form-group col-xs-4">
+      <p><b>Comentario:</b> <?php echo $sis->Comentario  ?></p>
+  </div> 
+  <div class="form-group col-xs-4">
+      <p><b>Puntuacion:</b> <?php echo'' . $sis->Puntuacion . '/10' ?></p>
+  </div> 
 </div>
+</div><br><br><br>
+<?php }}}} ?>
 
 <?php include_once "footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
