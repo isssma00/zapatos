@@ -191,6 +191,11 @@ footer {
   top: 0;
 }
 
+.comment{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 /* Container for image text */
 .caption-container {
   text-align: center;
@@ -219,4 +224,101 @@ footer {
 .active,
 .demo:hover {
   opacity: 1;
+}
+/* range */
+
+.inputDiv {
+  width: 90%;
+  margin: 50px auto;
+  position: relative;
+}
+
+input[type='range'] {
+  display: block;
+  width: 100%;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #02C38A;
+  width: 21px;
+  height: 21px;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: #02C38A;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: #02C38A;
+  width: 21px;
+  height: 21px;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: #333;
+  height: 5px;
+  -webkit-appearance: none;
+  background-image:linear-gradient(to right, #02C38A calc(var(--value)*10%), black 0);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+
+input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  background-image:linear-gradient(to right, #02C38A calc(var(--value)*10%), black 0);
+  height: 5px;
+}
+
+input[type=range]::-ms-track {
+  background-color: #777;
+  height: 3px;
+}
+
+.etiqueta {
+  width: 30px;
+  height: 26px;
+  position: absolute;
+  z-index: 9;
+  background-color: #02C38A;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 7px;
+  top: -45px;
+}
+
+.etiqueta:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 8;
+  background-color: #02C38A;
+  position: relative;
+  left: 9px;
 }

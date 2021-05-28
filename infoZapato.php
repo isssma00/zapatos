@@ -129,17 +129,23 @@ if($zapatos === FALSE){
 </div>
 
 </div><br><br><br>
+<?php if($Rol != 0){ 
+  echo'
 <div class="cardc" style="max-width: 100rem; width: auto; margin: auto auto">
 <div class=" comment">
 <form id="sistema" name="sistema" action="nuevo_sistema.php" method="POST" class="needs-validation" novalidate>
-<input type="hidden" name="idZapato" value="<?php echo $idZapatos; ?>">
+<input type="hidden" name="idZapato" value="' . $idZapatos . '">
+<input type="hidden" name="idUsuario" value="' . $idUser . '">
   <div class="form-group">
       <label>Comentario:</label>
-      <input id="comentario" required type="text" placeholder="Introduzca su comentario" class="form-control" name="usuario" autofocus="autofocus">
+      <input id="Comentario" required type="text" placeholder="Introduzca su comentario" class="form-control" name="Comentario" autofocus="autofocus">
   </div> 
   <div class="form-group">
       <label>Puntuacion:</label>
-      <input class="form-control" name="Puntuacion" required type="range" min="0" max="10" id="Puntuacion" placeholder="Puntuacion">
+      <div class="inputDiv">
+      <div class="etiqueta"></div>
+      <input type="range" value="5" min="0" max="10" autocomplete="off" id="input1" name="Puntuacion">
+      </div>
   </div> 
   <div class="form-group">
         <button class="btn btn-success" type="submit" name="submit">Enviar</button>
@@ -147,6 +153,7 @@ if($zapatos === FALSE){
 </form>
 </div>
 </div><br><br><br>
+ ';} ?>
 <?php foreach($sistema as $sis){ ?>
   <?php foreach($usuario as $usu){ ?>
   <?php
@@ -198,5 +205,36 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
+<script type="text/javascript">
+        //para el input
+  var Input = document.querySelector('#input1');
+  Input.style.setProperty("--value", Input.value);
+
+  if (Input) {
+    var w = parseInt(window.getComputedStyle(Input, null).getPropertyValue('width'));
+
+  Input.addEventListener("input", function(evt) {
+    Input.style.setProperty("--value", Input.value);
+},false);
+
+  //para la etiqueta
+  var etq = document.querySelector('.etiqueta');
+  if (etq) {
+    
+    etq.innerHTML = Input.value+"%";
+
+    var pxls = w / 10;
+
+    etq.style.left = ((Input.value * pxls) - 15) + 'px';
+
+    Input.addEventListener('input', function() {
+      
+      etq.innerHTML = Input.value+"%";
+      etq.style.left = ((Input.value * pxls) - 15) + 'px';
+
+    }, false);
+  }
+}
+    </script>
 </body>
 </html>

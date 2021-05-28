@@ -2,6 +2,7 @@
 session_start();
 //error_reporting(0);
 //Guardamos las sesiones en variables
+$idUser = $_SESSION['idUsuario'];
 $nombre = $_SESSION['Nombre'];
 $apellido1 = $_SESSION['Apellido1'];
 $apellido2 = $_SESSION['Apellido2'];
