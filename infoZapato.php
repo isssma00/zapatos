@@ -168,9 +168,19 @@ if($zapatos === FALSE){
   <div class="form-group col-xs-4">
       <p><b>Comentario:</b> <?php echo $sis->Comentario  ?></p>
   </div> 
-  <div class="form-group col-xs-4">
+  <div class="form-group col-xs-3">
       <p><b>Puntuacion:</b> <?php echo'' . $sis->Puntuacion . '/10' ?></p>
   </div> 
+  <?php
+    if(($sis->IdUsuario) == ($idUser)){
+    ?>
+    <div class="form-group col-xs-1">
+    <form method="post" action="eliminarsis.php">
+      <input type="hidden" name="idSistema" value="<?php echo $sis->idSistema; ?>">
+      <td><a><button onclick="return alerta()" class="btn btn-danger glyphicon glyphicon-trash" href="<?php echo "eliminarsis.php?idSistema=" . $sis->idSistema?>"><i class="fa fa-trash"></i></button></a></td>
+		</form>
+    </div>
+  <?php } ?>
 </div>
 </div><br><br><br>
 <?php }}}} ?>

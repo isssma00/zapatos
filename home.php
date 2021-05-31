@@ -25,7 +25,6 @@ require "./bd/Conector_BD.php";
 require "./bd/DAOZapatos.php";
 ?>
     <div class="container text-center">
-			<h1>Zapatitos</h1>
 			<!-- Carrousel -->
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -62,7 +61,6 @@ require "./bd/DAOZapatos.php";
 				</a>
 			</div>
 		</div>
-
 
 <?php include_once "footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
