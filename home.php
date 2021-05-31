@@ -61,6 +61,22 @@ require "./bd/DAOZapatos.php";
 				</a>
 			</div>
 		</div>
+<?php
+include_once "./bd/base_de_datos.php";
+$sentencia = $base_de_datos->query("SELECT * FROM marca;");
+$marca = $sentencia->fetchAll(PDO::FETCH_OBJ);
+$sentencia = $base_de_datos->query("SELECT * FROM zapatos;");
+$zapatos = $sentencia->fetchAll(PDO::FETCH_OBJ);
+$sentencia = $base_de_datos->query("SELECT * FROM sexo;");
+$sexo = $sentencia->fetchAll(PDO::FETCH_OBJ);
+?>
+  
+<div>
+  <div class="cardc col-sm-6 col-md-4 col-lg-3 prueba">        
+    <img src="images/fozapas/' . $zap->Imagen . '" class="img-responsive fotoTam" alt="Image">
+  </div>
+</div>
+      
 
 <?php include_once "footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
