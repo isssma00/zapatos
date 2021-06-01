@@ -71,13 +71,16 @@ $sentencia = $base_de_datos->query("SELECT * FROM sexo;");
 $sexo = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
   
-<div>
-  <div class="cardc col-sm-6 col-md-4 col-lg-3 prueba">        
-    <img src="images/fozapas/' . $zap->Imagen . '" class="img-responsive fotoTam" alt="Image">
+<div class="container text-center"> 
+  <h1>Catálogo por marcas</h1>
+<?php foreach($marca as $mark){ ?>
+  <div class="cardc col-sm-6 col-md-4 col-lg-3">  
+    <a href="<?php echo "catalogo.php?idMarca=" . $mark->idMarca?>"><img src="images/marcasYlogos/<?php echo $mark->Logo ?>" class="img-responsive logo" alt="Image"></a>
   </div>
+<?php } ?>
 </div>
       
-
+<br><br>
 <?php include_once "footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
