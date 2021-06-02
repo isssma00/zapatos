@@ -23,7 +23,7 @@
 <ol class="breadcrumb">
   <li><a href="home.php">Home</a></li>
   <li><a href="catalogo.php">Catalogo</a></li>
-  <li><a href="catalogo.php">Administración</a></li>
+  <li><a href="listar.php">Administración</a></li>
   <li class="active">Nuevo zapato</li>        
 </ol>
 <?php
