@@ -4,20 +4,20 @@ function conectar($esRemota)
 		//Variable que almacena la IP de mi Gestor de BD.
 		if($esRemota)
 		{
-			$servidor = "localhost:3306";
+			$servidor = "bdzapatos.cnpeguthatit.eu-west-3.rds.amazonaws.com";
 			$usuario = "root";
-			$password = "Alumn@2020";
+			$password = "Tenerife0031";
 			$bd = "Tienda_Zapatos";
 		}
 		else
 		{
-			$servidor = "localhost:3306";
+			$servidor = "bdzapatos.cnpeguthatit.eu-west-3.rds.amazonaws.com";
 			$usuario = "root";
-			$password = "Alumn@2020";
+			$password = "Tenerife0031";
 			$bd = "Tienda_Zapatos";
 		}
 		$conector = mysqli_connect($servidor, $usuario, $password, $bd);
-		$cone = new mysqli('localhost', 'root', 'Alumn@2020', 'Tienda_Zapatos') or die(mysqli_error());	
+		$cone = new mysqli('bdzapatos.cnpeguthatit.eu-west-3.rds.amazonaws.com', 'root', 'Tenerife0031', 'Tienda_Zapatos') or die(mysqli_error());	
 		if($conector)
 		{
 			return $conector;

@@ -1,11 +1,11 @@
 <?php
 
-$contraseña = "Alumn@2020";
+$contraseña = "Tenerife0031";
 $usuario = "root";
 $nombre_base_de_datos = "Tienda_Zapatos";
 try{
     //creamos el objeto conector
-	$base_de_datos = new PDO('mysql:host=localhost;dbname=' . $nombre_base_de_datos, $usuario, $contraseña);
+	$base_de_datos = new PDO('mysql:host=bdzapatos.cnpeguthatit.eu-west-3.rds.amazonaws.com;dbname=' . $nombre_base_de_datos, $usuario, $contraseña);
     //ajustamos la consulta
 	$base_de_datos->query("set names utf8;");
     //Establecemos atributos a las variables
