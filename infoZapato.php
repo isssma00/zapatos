@@ -58,7 +58,6 @@ if($zapatos === FALSE){
       <img src="./images/fozapas/<?php echo $zapatos->Imagen ?>" class="card-img fotoTam" alt="imagen">
       Esto es un comentario -->
 
-  <!-- Full-width images with number text -->
   <div class="mySlides">
     <div class="numbertext">1 / 3</div>
       <img src="./images/fozapas/<?php echo $zapatos->Imagen ?>" class="card-img fotoTam">
@@ -74,7 +73,6 @@ if($zapatos === FALSE){
       <img src="./images/fozapas/<?php echo $zapatos->Imagen3 ?>" class="card-img fotoTam">
   </div>
 
-  <!-- Thumbnail images -->
   <div>
     <div class="column">
       <img class="demo cursor" src="./images/fozapas/<?php echo $zapatos->Imagen ?>" style="width:100%" onclick="currentSlide(1)">
@@ -207,7 +205,7 @@ if($zapatos === FALSE){
   var slideIndex = 1;
 showSlides(slideIndex);
 
-// Thumbnail image controls
+// Cntrol de miniaturas
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }

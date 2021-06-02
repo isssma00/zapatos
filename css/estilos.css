@@ -140,17 +140,17 @@ footer {
       border-top: none;
     }
 
-/* Hide the images by default */
+/* Ocultar las imágenes por defecto */
 .mySlides {
   display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
+/* Agregue un puntero al pasar el cursor sobre las imágenes en miniatura */
 .cursor {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* Botones siguiente y anterior */
 .prev,
 .next {
   cursor: pointer;
@@ -167,19 +167,19 @@ footer {
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Coloque el "botón siguiente" a la derecha */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Al pasar el mouse, agregue un color de fondo negro con un poco de transparencia */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
+/* Texto numérico (1/3, etc.) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -193,7 +193,8 @@ footer {
   padding-right: 40px;
 }
 
-/* Container for image text */
+/* 
+Contenedor para texto de imagen */
 .caption-container {
   text-align: center;
   background-color: #222;
@@ -207,13 +208,13 @@ footer {
   clear: both;
 }
 
-/* Six columns side by side */
+/* tre columnas una al lado de la otra */
 .column {
   float: left;
   width: 33.33%;
 }
 
-/* Add a transparency effect for thumnbail images */
+/* Agregue un efecto de transparencia para imágenes en miniatura */
 .demo {
   opacity: 0.6;
 }
@@ -222,7 +223,7 @@ footer {
 .demo:hover {
   opacity: 1;
 }
-/* range */
+/* rango para el sistema de puntuacion */
 
 .inputDiv {
   width: 90%;
