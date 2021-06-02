@@ -20,6 +20,12 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li><a href="catalogo.php">Administración</a></li>
+  <li class="active">Nueva marca</li>        
+</ol>
 <!-- Formulario de registro de usuarios desde panel -->
 <div class="container-fluid bg-3">
 	<h1>Nueva marca</h1>

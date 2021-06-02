@@ -20,6 +20,11 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li class="active">Panel de administración</li>        
+</ol>
 <?php 
 //$Rol es una sesion
 if($Rol=="Usuario"){

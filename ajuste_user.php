@@ -21,6 +21,11 @@
 </div>
 <!-- Insertar cabecera -->
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li class="active">Modificar datos personales</li>        
+</ol>
 <!-- Llamar al conector de la base de datos -->
 <?php 
   require "./bd/base_de_datos.php";

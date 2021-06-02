@@ -36,6 +36,10 @@ $sexo = $sentencia->fetchAll(PDO::FETCH_OBJ);
 $sentencia = $base_de_datos->query("SELECT * FROM tallas;");
 $tallas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li class="active">Catalogo</li>        
+</ol>
 
 <div class="container-fluid bg-3 text-center row"> 
 <h1>MUNDO ZAPAS</h1><br>

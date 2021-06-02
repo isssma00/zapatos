@@ -20,6 +20,12 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li><a href="catalogo.php">Administración</a></li>
+  <li class="active">Editar usuario</li>        
+</ol>
 <!-- Si no existe el id salga de la pagina 
 y conectamos a la base de datos y realizamos la consulta-->
 <?php

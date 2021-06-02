@@ -20,7 +20,10 @@
 </div>
 
 <?php include_once "cabecera.php"?>
-
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li class="active">Mapa del sitio</li>        
+</ol>
 <div class="container-fluid bg-3 text-center row"> 
 <?php 
 //realizamos varios condicionales en funcion del rol modificando la barra de navegacion.

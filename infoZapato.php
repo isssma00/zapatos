@@ -19,6 +19,11 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li class="active">Informacion de zapato</li>        
+</ol>
 <!-- Conectar con la base de datos -->
 <?php
 if(!isset($_GET["idZapatos"])) exit();

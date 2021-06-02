@@ -20,6 +20,12 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="catalogo.php">Catalogo</a></li>
+  <li><a href="catalogo.php">Administración</a></li>
+  <li class="active">Nuevo producto</li>        
+</ol>
 <?php
 include_once "./bd/base_de_datos.php";
 $sentencia = $base_de_datos->prepare("SELECT * FROM productos;");

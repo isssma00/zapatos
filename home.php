@@ -20,6 +20,9 @@
 </div>
 
 <?php include_once "cabecera.php"?>
+<ol class="breadcrumb">
+  <li class="active">Home</li>        
+</ol>
 <?php
 require "./bd/Conector_BD.php";
 require "./bd/DAOZapatos.php";
