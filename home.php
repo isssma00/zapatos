@@ -44,7 +44,7 @@ require "./bd/DAOZapatos.php";
 						{
 					?>
 					<div class="item <?php echo ($i == 0) ? 'active' : '';?>">
-					<a href="infoZapato.php?idZapato=<?php echo $fila['idZapatos'];?>"><img src="./images/fozapas/<?php echo $fila['Imagen'];?>" alt="Zapatos" style="width:100%; height:800px;"></a>
+					<a href="infoZapato.php?idZapatos=<?php echo $fila['idZapatos'];?>"><img src="./images/fozapas/<?php echo $fila['Imagen'];?>" alt="Zapatos" style="width:100%; height:800px;"></a>
 					</div>
 					<?php
 							$i++;
@@ -79,7 +79,6 @@ $sexo = $sentencia->fetchAll(PDO::FETCH_OBJ);
   </div>
 <?php } ?>
 </div>
-      
 <br><br>
 <?php include_once "footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

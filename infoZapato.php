@@ -101,6 +101,7 @@ if($zapatos === FALSE){
         <?php } ?>
         <?php } ?>
         <?php 
+        if ($Rol != 0) {
           ?>
           <form method="post" action="agregarAlCarrito.php">
           <label for="idProductos">Tallaje:</label>
@@ -123,6 +124,15 @@ if($zapatos === FALSE){
          ';?>
 
          </form>
+          <?php
+        }else{
+          echo'
+          <form method="post" action="./Login/Login.html">
+          <button class="btn btn-success" type="submit" name="submit">Debe iniciar sesion para añadir a la cesta</button>
+          </form>
+          ';
+        }
+        ?>
       </div>
     </div>
   </div>

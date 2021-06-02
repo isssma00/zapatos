@@ -141,8 +141,6 @@ footer {
       border-top: none;
     }
 
-/* Position the image container (needed to position the left and right arrows) *
-
 /* Hide the images by default */
 .mySlides {
   display: none;
