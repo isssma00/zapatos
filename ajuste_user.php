@@ -33,7 +33,7 @@
 <!-- Ejecutamos la funcion necesaria y guardamos la sesion idUsuario -->
 <?php
     $idUsuario = $_SESSION["idUsuario"];
-    $sentencia = $base_de_datos->query("SELECT * FROM Usuario WHERE(`idUsuario` = '$idUsuario');");
+    $sentencia = $base_de_datos->query("SELECT * FROM usuario WHERE(`idUsuario` = '$idUsuario');");
     $usuario = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
     <div class="container-fluid">
